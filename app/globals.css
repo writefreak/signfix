@@ -213,3 +213,15 @@
     scroll-behavior: auto !important;
   }
 }
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9fe631;
+}

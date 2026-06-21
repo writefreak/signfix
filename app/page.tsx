@@ -6,6 +6,8 @@ import { Process } from "@/components/sections/process";
 import { Reviews } from "@/components/sections/reviews";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/sections/footer";
+import { MarqueeStrip } from "@/components/ui/marquee-strip";
+import { About } from "@/components/sections/about";
 
 export default function Home() {
   return (
@@ -13,9 +15,11 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <MarqueeStrip />
+        <About />
         <Services />
-        <Work />
         <Process />
+        <Work />
         <Reviews />
         <Contact />
       </main>

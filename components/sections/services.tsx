@@ -1,96 +1,113 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Type,
-  Monitor,
-  RectangleHorizontal,
-  Sparkles,
-  ShoppingBag,
-  Printer,
-} from "lucide-react";
+import WorkCard from "../ui/card";
 
 const SERVICES = [
   {
-    icon: Type,
-    title: "3D Letters & Acrylic Signs",
-    desc: "Built-up letters in acrylic, metal, or lit or unlit foam, sized to be read from the road.",
+    name: "Wall Cladding",
+    category: "Durable, weather-resistant finishes",
+    image:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
   },
   {
-    icon: Monitor,
-    title: "LED & Digital Displays",
-    desc: "Programmable digital signage for storefronts, lobbies, and screens that need to update often.",
+    name: "3D Model & Architectural Designs",
+    category: "Concept to visual design",
+    image:
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80",
   },
   {
-    icon: RectangleHorizontal,
-    title: "Outdoor Billboards",
-    desc: "Large-format structures engineered to stay put and stay legible through Lagos weather.",
+    name: "Signage Construction & Fabrication",
+    category: "Full-service safety signage",
+    image:
+      "https://images.unsplash.com/photo-1757954697151-ac9c4fb20fe1?auto=format&fit=crop&w=900&q=80",
   },
   {
-    icon: Sparkles,
-    title: "Neon & LED Signage",
-    desc: "Custom neon-style lettering and shapes for storefronts, events, and statement branding.",
+    name: "Digital Display Screen & Light Box",
+    category: "Advanced digital branding",
+    image:
+      "https://images.unsplash.com/photo-1635552322112-0194846b0d75?auto=format&fit=crop&w=900&q=80",
   },
   {
-    icon: ShoppingBag,
-    title: "Shop & Retail Signage",
-    desc: "Fascia, window graphics, and interior way-finding that match your brand at every touchpoint.",
+    name: "Office Wall Decor Branding",
+    category: "Interiors that transform",
+    image:
+      "https://images.unsplash.com/photo-1745015446589-7ee6f702d8c1?auto=format&fit=crop&w=900&q=80",
   },
   {
-    icon: Printer,
-    title: "Large Format Printing",
-    desc: "Banners, vehicle wraps, and event graphics printed and finished for outdoor durability.",
+    name: "Print Media & Design",
+    category: "Impressive printing & design",
+    image:
+      "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    name: "Safety Signs",
+    category: "Industrial-grade safety signage",
+    image:
+      "https://images.unsplash.com/photo-1759390304053-38477bf0ff68?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    name: "Kiosk Fabrication & Construction",
+    category: "Custom kiosk builds",
+    image:
+      "https://images.unsplash.com/photo-1673224980446-ed5dfa1065cd?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    name: "Wall Mounted Signs & Door Label",
+    category: "Wayfinding & door branding",
+    image:
+      "https://images.unsplash.com/photo-1776333887700-f18525f69901?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    name: "Wall Mural Art Printing",
+    category: "Large-format mural printing",
+    image:
+      "https://images.unsplash.com/photo-1776333887700-f18525f69901?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    name: "Fuel Station Canopy Construction",
+    category: "High-quality canopy structures",
+    image:
+      "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
 export function Services() {
   return (
-    <section id="services" className="bg-background py-14">
+    <section id="services" className="bg-background py-14 sm:py-10 md:pb-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="max-w-xl">
-          <h2 className="font-display mt-3 text-balance text-3xl font-extrabold tracking-tight text-foreground sm:text-5xl">
-            Six ways we make your business visible.
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+          className="max-w-xl"
+        >
+          <h2 className="font-display mt-3 text-balance text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
+            Our Services
           </h2>
-          <p className="mt-4 md:text-sm text-xs text-balance leading-relaxed text-neutral-500">
-            Every sign starts as a fabrication problem before it&apos;s a design
-            one and we seamlessly handle both.
-          </p>
-        </div>
+        </motion.div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((service, i) => {
-            const Icon = service.icon;
-            return (
+        {/* <div className="mt-10 -mx-6 lg:-mx-8 overflow-x-auto overscroll-x-contain scroll-smooth snap-x snap-mandatory [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"> */}
+        <div className="mt-10 -mx-6 lg:-mx-8 overflow-x-auto overflow-y-hidden overscroll-x-contain scroll-smooth snap-x snap-mandatory [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex gap-x-4 md:gap-x-6 px-6 lg:px-8 pb-2">
+            {SERVICES.map((service, i) => (
               <motion.div
-                key={service.title}
+                key={service.name}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="group relative overflow-hidden rounded-lg bg-ink-dark p-7 transition-shadow duration-300 hover:shadow-[0_0_36px_-6px_rgba(159,230,48,0.45)]"
+                transition={{
+                  duration: 0.45,
+                  delay: (i % SERVICES.length) * 0.05,
+                }}
+                whileHover={{ y: -4 }}
+                className="flex-none"
               >
-                <div
-                  className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background:
-                      "radial-gradient(circle at 30% 0%, rgba(159,230,48,0.16), transparent 60%)",
-                  }}
-                  aria-hidden="true"
-                />
-                <div className="relative">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-white/5 text-lime-bright transition-colors duration-300 group-hover:bg-lime-bright/15">
-                    <Icon className="h-5 w-5" strokeWidth={1.75} />
-                  </span>
-                  <h3 className="font-display mt-5 text-lg font-bold tracking-tight text-ink-dark-foreground">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2.5 text-xs md:text-sm leading-relaxed text-white/55">
-                    {service.desc}
-                  </p>
-                </div>
+                <WorkCard project={service} />
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
     </section>

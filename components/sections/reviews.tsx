@@ -26,7 +26,7 @@ const REVIEWS = [
 
 export function Reviews() {
   return (
-    <section id="reviews" className="bg-background py-24 sm:py-32">
+    <section id="reviews" className="bg-background py-20 sm:py-16">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="max-w-xl">
           <h2 className="font-display mt-3 text-balance text-3xl font-extrabold tracking-tight text-foreground sm:text-5xl">
