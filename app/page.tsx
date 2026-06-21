@@ -9,12 +9,14 @@ import { Footer } from "@/components/sections/footer";
 import { MarqueeStrip } from "@/components/ui/marquee-strip";
 import { About } from "@/components/sections/about";
 import { FAQ } from "@/components/sections/faq";
+import { ScrollFab } from "@/components/ui/scroll-fab";
 
 export default function Home() {
   return (
     <div id="top" className="flex min-h-screen flex-col">
       <Navbar />
       <main className="flex-1">
+        <ScrollFab />
         <Hero />
         <MarqueeStrip />
         <About />
