@@ -36,7 +36,7 @@ export function Reviews() {
             <button
               type="button"
               onClick={() => setFormOpen(true)}
-              className="inline-flex shrink-0 items-center gap-2 rounded-full border border-border bg-lime px-4 py-2.5 text-sm font-medium text-foreground transition-colors duration-200 hover:border-lime/40 hover:bg-lime/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl border border-border bg-lime px-4 py-2.5 text-sm font-medium text-foreground transition-colors duration-200 hover:border-lime/40 hover:bg-lime/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
             >
               <PenLine className="h-3.5 w-3.5" />
               Leave a Review
@@ -47,7 +47,7 @@ export function Reviews() {
                 type="button"
                 onClick={() => scrollByCard(-1)}
                 aria-label="Previous reviews"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-lime/10 text-muted-soft transition-colors duration-200 hover:border-lime/40 hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-lime/10 text-muted-soft transition-colors duration-200 hover:border-lime/40 hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
@@ -55,7 +55,7 @@ export function Reviews() {
                 type="button"
                 onClick={() => scrollByCard(1)}
                 aria-label="Next reviews"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-lime/10 text-muted-soft transition-colors duration-200 hover:border-lime/40 hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-lime/10 text-muted-soft transition-colors duration-200 hover:border-lime/40 hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
               >
                 <ChevronRight className="h-4 w-4" />
               </button>
