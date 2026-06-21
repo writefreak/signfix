@@ -8,6 +8,7 @@ import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/sections/footer";
 import { MarqueeStrip } from "@/components/ui/marquee-strip";
 import { About } from "@/components/sections/about";
+import { FAQ } from "@/components/sections/faq";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Process />
         <Work />
         <Reviews />
+        <FAQ />
         <Contact />
       </main>
       <Footer />

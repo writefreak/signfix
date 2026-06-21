@@ -30,7 +30,7 @@ export function MarqueeStrip() {
   return (
     <section
       ref={containerRef}
-      className="overflow-hidden border-b md:border-y border-border dark:dark:bg-white bg-background py-14 sm:py-14"
+      className="overflow-hidden border-b md:border-y border-border dark:bg-white bg-background py-14 sm:py-14"
     >
       <div className="flex flex-col gap-6 sm:gap-8">
         <motion.div

@@ -83,7 +83,7 @@ export function Work() {
   const cards = [...PROJECTS, ...PROJECTS];
 
   return (
-    <section id="work" className="bg-background py-14 sm:py-24">
+    <section id="work" className="bg-background py-14 md:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="max-w-xl">
           <h2 className="font-display mt-3 text-balance text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
