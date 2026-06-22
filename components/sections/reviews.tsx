@@ -191,7 +191,7 @@ export function Reviews() {
                     <p className="text-sm font-semibold text-foreground">
                       {active.name}
                     </p>
-                    <p className="font-mono text-xs text-muted-soft">
+                    <p className="font-sans text-xs text-muted-soft">
                       {active.company}
                     </p>
                   </div>
