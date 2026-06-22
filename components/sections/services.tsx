@@ -76,7 +76,7 @@ export function Services() {
   return (
     <section
       id="services"
-      className="bg-background dark:bg-[#050505] pt-12 md:pt-20 pb-26 md:py-10 md:pb-32"
+      className="bg-background dark:bg-[#050505] pt-16 md:pt-20 pb-26 md:py-10 md:pb-32"
     >
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <motion.div
