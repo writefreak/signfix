@@ -74,7 +74,10 @@ const SERVICES = [
 
 export function Services() {
   return (
-    <section id="services" className="bg-background py-14 sm:py-10 md:pb-32">
+    <section
+      id="services"
+      className="bg-background dark:bg-[#050505] pt-12 md:pt-20 pb-26 md:py-10 md:pb-32"
+    >
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -89,8 +92,8 @@ export function Services() {
         </motion.div>
 
         {/* <div className="mt-10 -mx-6 lg:-mx-8 overflow-x-auto overscroll-x-contain scroll-smooth snap-x snap-mandatory [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"> */}
-        <div className="mt-10 -mx-6 lg:-mx-8 overflow-x-auto overflow-y-hidden overscroll-x-contain scroll-smooth snap-x snap-mandatory [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex gap-x-4 md:gap-x-6 px-6 lg:px-8 pb-2">
+        <div className="mt-10 overflow-x-auto overflow-y-hidden overscroll-x-contain scroll-smooth snap-x snap-mandatory [-webkit-overflow-scrolling:touch] scrollbar-none [&::-webkit-scrollbar]:hidden">
+          <div className="flex gap-x-4 md:gap-x-6 pt-2 pb-2">
             {SERVICES.map((service, i) => (
               <motion.div
                 key={service.name}

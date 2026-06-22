@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useInView, animate } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SeparatorFade } from "../ui/separator";
 
 const STATS = [
   { value: 12, suffix: "+", label: "Years Experience" },
@@ -131,7 +132,7 @@ export function About() {
             </p>
             <div className="md:pt-12 hidden md:block">
               <Button size="lg" className="group">
-                Request A Quote
+                Discover More
                 <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
               </Button>
             </div>
@@ -168,7 +169,7 @@ export function About() {
         </div>
         <div className="pt-10 md:hidden">
           <Button size="lg" className="group">
-            Request A Quote
+            Discover More
             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
           </Button>
         </div>

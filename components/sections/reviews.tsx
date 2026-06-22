@@ -20,10 +20,7 @@ export function Reviews() {
   };
 
   return (
-    <section
-      id="reviews"
-      className="bg-background py-20 md:py-1 md:pt-0 md:pb-20"
-    >
+    <section id="reviews" className="bg-background pt-10 md:py-1 md:pt-0 pb-20">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-xl">
@@ -32,11 +29,11 @@ export function Reviews() {
             </h2>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="md:flex hidden items-center gap-3">
             <button
               type="button"
               onClick={() => setFormOpen(true)}
-              className="inline-flex shrink-0 items-center gap-2 rounded-xl border border-border bg-lime px-4 py-2.5 text-sm font-medium text-foreground transition-colors duration-200 hover:border-lime/40 hover:bg-lime/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-medium text-foreground transition-colors duration-200 border-lime/40 bg-lime/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
             >
               <PenLine className="h-3.5 w-3.5" />
               Leave a Review
@@ -47,7 +44,7 @@ export function Reviews() {
                 type="button"
                 onClick={() => scrollByCard(-1)}
                 aria-label="Previous reviews"
-                className="flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-lime/10 text-muted-soft transition-colors duration-200 hover:border-lime/40 hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-lime bg-lime/10 text-muted-soft transition-colors duration-200 hover:border-lime/40 hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
@@ -55,7 +52,7 @@ export function Reviews() {
                 type="button"
                 onClick={() => scrollByCard(1)}
                 aria-label="Next reviews"
-                className="flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-lime/10 text-muted-soft transition-colors duration-200 hover:border-lime/40 hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-lime bg-lime/10 text-muted-soft transition-colors duration-200 hover:border-lime/40 hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
               >
                 <ChevronRight className="h-4 w-4" />
               </button>
@@ -65,9 +62,9 @@ export function Reviews() {
 
         <div
           ref={scrollerRef}
-          className="mt-14 -mx-6 lg:-mx-8 overflow-x-auto overflow-y-hidden overscroll-x-contain scroll-smooth snap-x snap-mandatory [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="pt-7 md:pt-14 overflow-x-auto overflow-y-hidden overscroll-x-contain scroll-smooth snap-x snap-mandatory [-webkit-overflow-scrolling:touch] scrollbar-none [&::-webkit-scrollbar]:hidden"
         >
-          <div className="flex gap-6 px-6 lg:px-8 pt-2 pb-2">
+          <div className="flex gap-6 pt-2 pb-2">
             {REVIEWS.map((review, i) => (
               <motion.button
                 type="button"
@@ -104,6 +101,35 @@ export function Reviews() {
                 </div>
               </motion.button>
             ))}
+          </div>
+        </div>
+        <div className="flex md:hidden pt-5 items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setFormOpen(true)}
+            className="inline-flex shrink-0 items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-medium text-foreground transition-colors duration-200 border-lime/40 bg-lime/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
+          >
+            <PenLine className="h-3.5 w-3.5" />
+            Leave a Review
+          </button>
+
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => scrollByCard(-1)}
+              aria-label="Previous reviews"
+              className="flex h-9 w-9 items-center justify-center rounded-xl border border-lime bg-lime/10 text-muted-soft transition-colors duration-200 hover:border-lime/40 hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollByCard(1)}
+              aria-label="Next reviews"
+              className="flex h-9 w-9 items-center justify-center rounded-xl border border-lime bg-lime/10 text-muted-soft transition-colors duration-200 hover:border-lime/40 hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/40"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
           </div>
         </div>
       </div>

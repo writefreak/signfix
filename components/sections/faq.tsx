@@ -10,9 +10,9 @@ import {
 
 const FAQS = [
   {
-    question: "What kind of signage projects do you take on?",
+    question: "What kind of projects do you take on?",
     answer:
-      "We handle everything from fascia signage and LED letters to wall cladding, kiosk fabrication, safety signs, and large-format print and mural work — for retail, corporate, and industrial clients.",
+      "We handle everything from material branding, fascia signage and LED letters to wall cladding, kiosk fabrication, safety signs, and large-format print and mural work for retail, corporate, and industrial clients.",
   },
   {
     question: "How long does a typical project take?",
@@ -25,9 +25,9 @@ const FAQS = [
       "Yes, we deliver and install across Nigeria. Our in-house team handles fabrication, delivery, and on-site installation end to end.",
   },
   {
-    question: "Can you work from our existing brand guidelines?",
+    question: "What's your minimum order size?",
     answer:
-      "Absolutely. Send us your brand assets and we'll produce 3D mockups for sign-off before anything goes into fabrication.",
+      "We work with businesses of all sizes, there's no minimum. Whether it's a single door label or a full multi-site rollout, we'll scope it and price it accordingly.",
   },
   {
     question: "What's included in a quote?",
@@ -38,7 +38,7 @@ const FAQS = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="bg-background py-20 sm:pt-20">
+    <section id="faq" className="bg-background pt-10 pb-26 md:pt-27 md:pb-27">
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
@@ -67,10 +67,10 @@ export function FAQ() {
                 value={`item-${i}`}
                 className="overflow-hidden rounded-xl bg-lime px-6 transition-colors duration-200 hover:border-lime/30 data-[state=open]:border-lime/30"
               >
-                <AccordionTrigger className="py-5 text-left text-base font-semibold text-ink-dark hover:no-underline [&>svg]:text-lime [&>svg]:h-5 [&>svg]:w-5">
+                <AccordionTrigger className="py-5 text-left md:text-base text-sm font-semibold text-ink-dark hover:no-underline [&>svg]:text-lime [&>svg]:h-5 [&>svg]:w-5">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="pb-5 text-sm leading-relaxed text-ink-dark/90">
+                <AccordionContent className="pb-5 text-xs md:text-sm leading-relaxed text-ink-dark/90">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

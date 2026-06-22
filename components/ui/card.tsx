@@ -33,7 +33,7 @@ export default function WorkCard({
         <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
-          <div className="bg-black/40 backdrop-blur-md border border-white/20 rounded-xl p-3 flex flex-col gap-2">
+          <div className=" bg-black/40 backdrop-blur-md border border-white/20 rounded-xl p-4 flex flex-col gap-2">
             <div className="flex items-end justify-between">
               <div>
                 <h3 className="font-display text-sm font-semibold text-white leading-snug">

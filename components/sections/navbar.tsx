@@ -7,9 +7,10 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const NAV_LINKS = [
+  { label: "About", href: "/about" },
   { label: "Services", href: "#services" },
   { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Reviews", href: "#reviews" },
   { label: "Contact", href: "#contact" },
 ];
@@ -21,7 +22,7 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4 lg:px-8">
       <div className="mx-auto md:max-w-4xl max-w-6xl">
         <div className="flex items-center justify-between gap-4 rounded-xl border border-white/10 bg-ink-dark/70 px-4 py-3 shadow-[0_8px_30px_-8px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:px-5">
-          <a href="#top" className="h-7">
+          <a href="/" className="h-7">
             <img
               src="/signfixlogo.png"
               alt=""

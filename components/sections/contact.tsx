@@ -52,9 +52,9 @@ export function Contact() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex flex-col gap-6 border-t border-white/10 pt-8 lg:border-t-0 lg:border-l lg:pl-12 lg:pt-0"
           >
-            <ContactRow icon={Phone} value="+234 911 010 0009" />
-            <ContactRow icon={Mail} value="info@signfix.ng" />
-            <ContactRow icon={MapPin} value="Lagos, Nigeria" />
+            {contactrow.map((c, index) => (
+              <ContactRow key={index} icon={c.icon} value={c.value} />
+            ))}
           </motion.div>
         </div>
       </div>
@@ -77,11 +77,32 @@ function ContactRow({
         <Icon className="h-4 w-4" strokeWidth={1.75} />
       </span>
       <div>
-        <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-white/40">
+        <p className="font-mono text-sm md:text-[11px] uppercase tracking-widest text-white/40">
           {label}
         </p>
-        <p className="mt-0.5 font-medium text-ink-dark-foreground">{value}</p>
+        <p className="mt-0.5 font-medium text-xs md:text-sm text-ink-dark-foreground">
+          {value}
+        </p>
       </div>
     </div>
   );
 }
+
+const contactrow = [
+  {
+    icon: Phone,
+    value: "+234-903-336-6660",
+  },
+  {
+    icon: Mail,
+    value: "info@signfix.ng",
+  },
+  {
+    icon: Mail,
+    value: "support@signfix.ng",
+  },
+  {
+    icon: MapPin,
+    value: "Lagos, Nigeria",
+  },
+];

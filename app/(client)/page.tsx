@@ -10,16 +10,19 @@ import { MarqueeStrip } from "@/components/ui/marquee-strip";
 import { About } from "@/components/sections/about";
 import { FAQ } from "@/components/sections/faq";
 import { ScrollFab } from "@/components/ui/scroll-fab";
+import { SeparatorFade } from "@/components/ui/separator";
+import { ClientLogoStrip } from "@/components/ui/client-logo-strip";
 
 export default function Home() {
   return (
     <div id="top" className="flex min-h-screen flex-col">
-      <Navbar />
       <main className="flex-1">
         <ScrollFab />
         <Hero />
         <MarqueeStrip />
         <About />
+        <SeparatorFade />
+        <ClientLogoStrip />
         <Services />
         <Process />
         <Work />
@@ -27,7 +30,6 @@ export default function Home() {
         <FAQ />
         <Contact />
       </main>
-      <Footer />
     </div>
   );
 }

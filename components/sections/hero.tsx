@@ -18,12 +18,12 @@ export function Hero() {
         alt="Signfix signage installation"
         fill
         priority
-        className="object-cover brightness-50 md:rounded-b-none rounded-b-2xl"
+        className="object-cover brightness-50 "
       />
 
       {/* Subtle black gradient, left to right, so text stays legible over the image */}
       <div
-        className="md:rounded-b-none rounded-b-2xl absolute inset-0 bg-linear-to-r from-black/85 from-30% to-transparent to-100%"
+        className=" absolute inset-0 bg-linear-to-r from-black/85 from-30% to-transparent to-100%"
         aria-hidden="true"
       />
 
