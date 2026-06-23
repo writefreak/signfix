@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -25,9 +25,36 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Signfix Industrial Limited | Premium Signage, Fabricated to Last",
+  title: "Best Signage Company in Nigeria | Signfix Industrial Limited",
   description:
-    "Signfix Industrial Limited designs, fabricates, and installs premium signage across Lagos and Nigeria — 3D letters, LED & digital displays, outdoor billboards, neon, and large-format printing.",
+    "Signfix Industrial Limited specializes in innovative, high-quality, and affordable signage solutions for customers of all types and industries across Lagos and Nigeria.",
+  openGraph: {
+    title: "Best Signage Company in Nigeria | Signfix Industrial Limited",
+    description:
+      "Signfix Industrial Limited specializes in innovative, high-quality, and affordable signage solutions for customers of all types and industries across Lagos and Nigeria.",
+    url: "https://signfix.ng/",
+    siteName: "Signfix Industrial Limited | Signage Company in Lagos, Nigeria",
+    images: [
+      {
+        url: "https://signfix.ng/wp-content/uploads/2017/11/SignFix-Social-Icon-3.jpg",
+        width: 1012,
+        height: 1012,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Signage Company in Nigeria | Signfix Industrial Limited",
+    description:
+      "Signfix Industrial Limited specializes in innovative, high-quality, and affordable signage solutions for customers of all types and industries across Lagos and Nigeria.",
+    images: [
+      "https://signfix.ng/wp-content/uploads/2017/11/SignFix-Social-Icon-3.jpg",
+    ],
+  },
+  alternates: {
+    canonical: "https://signfix.ng/",
+  },
 };
 
 export default function RootLayout({
@@ -39,7 +66,15 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("h-full", "antialiased", archivo.variable, inter.variable, jetbrainsMono.variable, "font-sans", geist.variable)}
+      className={cn(
+        "h-full",
+        "antialiased",
+        archivo.variable,
+        inter.variable,
+        jetbrainsMono.variable,
+        "font-sans",
+        geist.variable,
+      )}
     >
       <body className="min-h-full flex flex-col font-sans">
         <ThemeProvider

@@ -1,17 +1,12 @@
 "use client";
-
-import { motion } from "framer-motion";
-import WorkCard from "../ui/card";
+import ServicesCard from "@/components/ui/services-card";
 import { SERVICES } from "@/lib/data/services-data";
-import ServicesCard from "../ui/services-card";
+import { motion } from "framer-motion";
 
-export function Services() {
+export default function ServicesPage() {
   return (
-    <section
-      id="services"
-      className="bg-background dark:bg-[#050505] pt-16 md:pt-24 pb-26 md:py-10 md:pb-32"
-    >
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+    <main className="bg-background">
+      <div className="mx-auto max-w-6xl py-20 md:py-32 px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,6 +17,9 @@ export function Services() {
           <h2 className="font-display mt-3 text-balance text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
             Explore Our Services
           </h2>
+          <p className="font-sans text-xs pt-5 md:text-sm text-white/55 not-dark:text-neutral-600 leading-relaxed">
+            Click a card to explore each service
+          </p>
         </motion.div>
 
         <div className="mt-10 overflow-x-auto overflow-y-hidden overscroll-x-contain scroll-smooth snap-x snap-mandatory [-webkit-overflow-scrolling:touch] scrollbar-none [&::-webkit-scrollbar]:hidden">
@@ -45,6 +43,6 @@ export function Services() {
           </div>
         </div>
       </div>
-    </section>
+    </main>
   );
 }

@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SignfixProject {
+  id: string;
   name: string;
   category: string;
   image: string;

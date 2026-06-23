@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { HeroBackground } from "../home/hero-background";
 
 const HEADLINE = "Premium Signages That Get You Seen";
 
@@ -13,19 +14,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-border">
       {/* Background image — covers full hero, mobile and desktop */}
-      <Image
-        src="/signfix 2.png"
-        alt="Signfix signage installation"
-        fill
-        priority
-        className="object-cover brightness-50 "
-      />
-
-      {/* Subtle black gradient, left to right, so text stays legible over the image */}
-      <div
-        className=" absolute inset-0 bg-linear-to-r from-black/85 from-30% to-transparent to-100%"
-        aria-hidden="true"
-      />
+      <HeroBackground />
 
       <div className="relative mx-auto max-w-6xl px-6 pt-44 pb-40 sm:pt-40 sm:pb-36 lg:px-8 lg:pt-48 lg:pb-44">
         {/* Text + buttons — pinned left, never centered as a flex group */}
